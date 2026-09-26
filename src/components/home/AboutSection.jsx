@@ -9,7 +9,7 @@ export default function AboutSection() {
           {/* Imagen */}
           <div className="relative min-h-105 overflow-hidden rounded-3xl sm:min-h-130">
             <Image
-              src="/images/about/sound-fusion-event-production.webp"
+              src="/public/gallery/professional-sound-corporate-event.webp"
               alt="Sound Fusion professional event production team"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
