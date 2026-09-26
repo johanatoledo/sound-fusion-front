@@ -10,7 +10,7 @@ export default function MobileMenu({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[60] md:hidden">
+    <div className="fixed inset-0 z-60 md:hidden">
       {/* Fondo */}
       <button
         type="button"
