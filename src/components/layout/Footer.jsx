@@ -1,25 +1,42 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { NAV_LINKS } from "@/data/navigation";
+
+import Button from "@/components/ui/Button";
+import Container from "@/components/ui/Container";
+
+const FOOTER_INFO_LINKS = [
+  {
+    href: "/privacy-policy",
+    label: "Privacy Policy",
+  },
+  {
+    href: "/terms",
+    label: "Terms",
+  },
+];
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="border-t border-white/10 bg-sound-black">
-      <div className="sound-container">
+      <Container>
         <div className="grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-4 lg:py-16">
           {/* Marca */}
           <div className="lg:col-span-2">
             <Link
               href="/"
-              aria-label="Sound Fusion home"
+              aria-label="Go to Sound Fusion homepage"
+              className="inline-flex"
             >
               <Image
                 src="/images/logo/logoSoundFusion.webp"
-                alt="Sound Fusion"
+                alt="Sound Fusion Entertainment"
                 width={150}
                 height={70}
-                className="h-auto w-32.5"
+                className="h-auto w-[130px]"
               />
             </Link>
 
@@ -27,64 +44,55 @@ export default function Footer() {
               Professional sound, lighting and event production solutions
               designed to create unforgettable experiences.
             </p>
+
+            <div className="mt-6">
+              <Button href="/quote">
+                Get a Quote
+              </Button>
+            </div>
           </div>
 
           {/* Navegación */}
           <div>
-            <h3 className="font-bold text-sound-white">
+            <h2 className="font-bold text-sound-white">
               Quick Links
-            </h3>
+            </h2>
 
-            <nav className="mt-5 flex flex-col gap-3">
-              <Link href="/" className="sound-nav-link w-fit">
-                Home
-              </Link>
-
-              <Link href="/services" className="sound-nav-link w-fit">
-                Services
-              </Link>
-
-              <Link href="/gallery" className="sound-nav-link w-fit">
-                Gallery
-              </Link>
-
-              <Link href="/about" className="sound-nav-link w-fit">
-                About
-              </Link>
-
-              <Link href="/contact" className="sound-nav-link w-fit">
-                Contact
-              </Link>
+            <nav
+              className="mt-5 flex flex-col gap-3"
+              aria-label="Footer navigation"
+            >
+              {NAV_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="sound-nav-link w-fit"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
           </div>
 
-          {/* Legal */}
+          {/* Información */}
           <div>
-            <h3 className="font-bold text-sound-white">
+            <h2 className="font-bold text-sound-white">
               Information
-            </h3>
+            </h2>
 
-            <nav className="mt-5 flex flex-col gap-3">
-              <Link
-                href="/quote"
-                className="sound-nav-link w-fit"
-              >
-                Get a Quote
-              </Link>
-
-              <Link
-                href="/privacy-policy"
-                className="sound-nav-link w-fit"
-              >
-                Privacy Policy
-              </Link>
-
-              <Link
-                href="/terms"
-                className="sound-nav-link w-fit"
-              >
-                Terms
-              </Link>
+            <nav
+              className="mt-5 flex flex-col gap-3"
+              aria-label="Legal navigation"
+            >
+              {FOOTER_INFO_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="sound-nav-link w-fit"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
           </div>
         </div>
@@ -93,14 +101,14 @@ export default function Footer() {
 
         <div className="flex flex-col gap-3 py-6 text-sm text-sound-gray sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {currentYear} Sound Fusion. All rights reserved.
+            © {currentYear} Sound Fusion Entertainment. All rights reserved.
           </p>
 
           <p>
             Professional Sound • Lighting • Events
           </p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }
