@@ -5,7 +5,7 @@ export const services = [
     title: "Event Lighting",
     shortDescription:
       "Transform your venue with professional lighting designed around your event.",
-    image: "/public/gallery/event-lighting.webp",
+    image: "/gallery/event-lighting.webp",
   },
 
   {
@@ -14,7 +14,7 @@ export const services = [
     title: "Professional Sound",
     shortDescription:
       "Powerful and crystal-clear sound systems for events of every size.",
-    image: "/public/gallery/professional-sound-dj-event.webp",
+    image: "/gallery/professional-sound-dj-event.webp",
   },
 
   {
@@ -23,7 +23,7 @@ export const services = [
     title: "DJ & Entertainment",
     shortDescription:
       "Professional entertainment to keep your guests engaged and your event moving.",
-    image: "/public/gallery/dj-professionl-event.webp",
+    image: "/gallery/dj-professionl-event.webp",
   },
 
   {
@@ -32,6 +32,6 @@ export const services = [
     title: "Event Production",
     shortDescription:
       "Complete technical support for weddings, corporate events and celebrations.",
-    image: "/public/gllery/wedding-lighting-dance.webp",
+    image: "/gllery/wedding-lighting-dance.webp",
   },
 ];
