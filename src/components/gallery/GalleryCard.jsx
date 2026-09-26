@@ -9,7 +9,7 @@ export default function GalleryCard({
 }) {
   return (
     <article
-      className={`sound-card group relative min-h-[360px] ${className}`}
+      className={`sound-card group relative min-h-90 ${className}`}
     >
       <Image
         src={image}
