@@ -828,3 +828,262 @@ video {
       );
   }
 }
+
+/* ==========================================================================
+   QUOTE FORM
+   ========================================================================== */
+
+.sound-quote-sidebar {
+  position: relative;
+
+  padding: 2rem 1.5rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(181, 220, 23, 0.12),
+      transparent 45%
+    ),
+    var(--sound-dark);
+}
+
+.sound-quote-feature {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 1rem;
+}
+
+.sound-quote-feature-title {
+  color: var(--sound-white);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.sound-quote-feature-text {
+  margin-top: 0.25rem;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+
+/* --------------------------------------------------------------------------
+   FORM LABEL
+   -------------------------------------------------------------------------- */
+
+.sound-form-label {
+  display: block;
+
+  margin-bottom: 0.5rem;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.sound-form-required {
+  margin-left: 0.25rem;
+
+  color: var(--sound-lime);
+}
+
+
+/* --------------------------------------------------------------------------
+   INPUT ERROR
+   -------------------------------------------------------------------------- */
+
+.sound-input-error {
+  border-color: #ef4444;
+}
+
+.sound-input-error:focus {
+  border-color: #ef4444;
+
+  box-shadow:
+    0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+.sound-form-error {
+  margin-top: 0.4rem;
+
+  color: #f87171;
+
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+
+/* --------------------------------------------------------------------------
+   SERVICES SELECTOR
+   -------------------------------------------------------------------------- */
+
+.sound-service-option {
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  min-height: 52px;
+
+  padding: 0.8rem 1rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.85rem;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.sound-service-option:hover {
+  border-color: rgba(181, 220, 23, 0.4);
+
+  background: rgba(181, 220, 23, 0.05);
+}
+
+.sound-service-option-selected {
+  border-color: var(--sound-lime);
+
+  background: rgba(181, 220, 23, 0.08);
+
+  color: var(--sound-white);
+}
+
+.sound-service-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+  height: 22px;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+
+  color: var(--sound-lime);
+}
+
+.sound-service-option-selected
+.sound-service-check {
+  border-color: var(--sound-lime);
+}
+
+
+/* --------------------------------------------------------------------------
+   FORM SUCCESS
+   -------------------------------------------------------------------------- */
+
+.sound-form-success {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 0.75rem;
+
+  margin-top: 1.5rem;
+
+  padding: 1rem;
+
+  border: 1px solid rgba(181, 220, 23, 0.3);
+  border-radius: 0.85rem;
+
+  background: rgba(181, 220, 23, 0.08);
+
+  color: var(--sound-lime);
+
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+
+/* --------------------------------------------------------------------------
+   FORM GENERAL ERROR
+   -------------------------------------------------------------------------- */
+
+.sound-form-submit-error {
+  margin-top: 1.5rem;
+
+  padding: 1rem;
+
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 0.85rem;
+
+  background: rgba(239, 68, 68, 0.08);
+
+  color: #f87171;
+
+  font-size: 0.875rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   SELECT
+   -------------------------------------------------------------------------- */
+
+select.sound-input {
+  appearance: none;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      rgba(255, 255, 255, 0.6) 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.6) 50%,
+      transparent 50%
+    );
+
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 13px) 50%;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+
+  padding-right: 2.75rem;
+}
+
+select.sound-input option {
+  background: var(--sound-dark);
+
+  color: var(--sound-white);
+}
+
+
+/* --------------------------------------------------------------------------
+   DESKTOP
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 1024px) {
+  .sound-quote-sidebar {
+    padding: 2.5rem;
+
+    border-right:
+      1px solid rgba(255, 255, 255, 0.08);
+
+    border-bottom: 0;
+  }
+}

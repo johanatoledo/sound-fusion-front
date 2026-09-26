@@ -1,8 +1,4 @@
-import {
-  CalendarDays,
-  MapPin,
-  Users,
-} from "lucide-react";
+import { CalendarDays, MapPin, Users, } from "lucide-react";
 
 const FEATURES = [
   {
@@ -49,9 +45,8 @@ export default function QuoteSidebar() {
       </p>
 
       <div className="mt-8 space-y-6">
-        {FEATURES.map(
-          ({
-            id,
+        {FEATURES.map( ({
+             id,
             icon: Icon,
             title,
             description,
