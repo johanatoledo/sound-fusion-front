@@ -7,7 +7,7 @@ export default function AboutSection() {
       <div className="sound-container">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Imagen */}
-          <div className="relative min-h-[420px] overflow-hidden rounded-3xl sm:min-h-[520px]">
+          <div className="relative min-h-105 overflow-hidden rounded-3xl sm:min-h-130">
             <Image
               src="/images/about/sound-fusion-event-production.webp"
               alt="Sound Fusion professional event production team"
