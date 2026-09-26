@@ -168,8 +168,78 @@ video {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--sound-lime);
 }
+/* ==========================================================================
+   NAVBAR LAYOUT
+   ========================================================================== */
 
+.sound-navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+  padding-block: 1rem;
+}
+
+.sound-navbar-logo {
+  width: 110px;
+  height: auto;
+}
+
+.sound-navbar-menu {
+  display: none;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.sound-navbar-cta {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .sound-navbar-logo {
+    width: 130px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sound-navbar-menu {
+    display: flex;
+  }
+
+  .sound-navbar-cta {
+    display: inline-flex;
+  }
+}
+
+/* ==========================================================================
+   MOBILE MENU
+   ========================================================================== */
+
+.sound-mobile-link {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 1rem 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: var(--sound-white);
+
+  font-size: 1.125rem;
+  font-weight: 600;
+
+  transition:
+    color 0.25s ease,
+    padding-left 0.25s ease;
+}
+
+.sound-mobile-link:hover {
+  color: var(--sound-lime);
+  padding-left: 0.35rem;
+}
 /* ==========================================================================
    MAIN LAYOUT
    ========================================================================== */
@@ -376,7 +446,70 @@ video {
   box-shadow:
     0 20px 50px rgba(0, 0, 0, 0.35);
 }
+/* ==========================================================================
+   SERVICE CARD
+   ========================================================================== */
 
+.sound-service-card {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.sound-service-card-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 10;
+
+  padding: 1.5rem;
+}
+
+.sound-service-card-title {
+  color: var(--sound-white);
+
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.sound-service-card-description {
+  margin-top: 0.75rem;
+
+  max-width: 28rem;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.sound-service-card-link {
+  display: inline-flex;
+
+  margin-top: 1.25rem;
+
+  color: var(--sound-lime);
+
+  font-weight: 600;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.sound-service-card:hover .sound-service-card-link {
+  transform: translateX(4px);
+}
+
+@media (min-width: 640px) {
+  .sound-service-card-content {
+    padding: 2rem;
+  }
+}
 
 /* ==========================================================================
    BADGE
