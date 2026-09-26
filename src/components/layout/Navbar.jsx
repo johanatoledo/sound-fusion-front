@@ -5,7 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 
-import MobileMenu from "./MobileMenu";
+import { NAV_LINKS } from "@/data/navigation";
+
+import MobileMenu from "@/components/layout/MobileMenu";
+import Button from "@/components/ui/Button";
+import Container from "@/components/ui/Container";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,15 +25,15 @@ export default function Navbar() {
   return (
     <>
       <header className="sound-navbar fixed left-0 top-0 z-50 w-full">
-        <nav className="sound-container sound-navbar-container">
+        <Container className="sound-navbar-container">
           <Link
             href="/"
             className="shrink-0"
-            aria-label="Sound Fusion home"
+            aria-label="Go to Sound Fusion homepage"
           >
             <Image
               src="/images/logo/logoSoundFusion.webp"
-              alt="Sound Fusion"
+              alt="Sound Fusion Entertainment"
               width={150}
               height={70}
               priority
@@ -37,61 +41,42 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="sound-navbar-menu">
-            <Link
-              href="/"
-              className="sound-nav-link"
-            >
-              Home
-            </Link>
+          <nav
+            className="sound-navbar-menu"
+            aria-label="Main navigation"
+          >
+            {NAV_LINKS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="sound-nav-link"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
 
-            <Link
-              href="/services"
-              className="sound-nav-link"
-            >
-              Services
-            </Link>
-
-            <Link
-              href="/gallery"
-              className="sound-nav-link"
-            >
-              Gallery
-            </Link>
-
-            <Link
-              href="/about"
-              className="sound-nav-link"
-            >
-              About
-            </Link>
-
-            <Link
-              href="/contact"
-              className="sound-nav-link"
-            >
-              Contact
-            </Link>
-          </div>
-
-          <Link
+          <Button
             href="/quote"
-            className="sound-button-primary sound-navbar-cta"
+            className="sound-navbar-cta"
           >
             Get a Quote
-          </Link>
+          </Button>
 
-          {/* Botón móvil */}
           <button
             type="button"
             onClick={abrirMenu}
-            aria-label="Open menu"
+            aria-label="Open navigation menu"
             aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-sound-white transition hover:border-sound-lime hover:text-sound-lime md:hidden"
           >
-            <Menu size={21} />
+            <Menu
+              size={21}
+              aria-hidden="true"
+            />
           </button>
-        </nav>
+        </Container>
       </header>
 
       <MobileMenu
