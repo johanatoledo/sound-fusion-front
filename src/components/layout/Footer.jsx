@@ -1,21 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { NAV_LINKS } from "@/data/navigation";
+import { NAV_LINKS, FOOTER_INFO_LINKS } from "@/data/navigation";
 
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 
-const FOOTER_INFO_LINKS = [
-  {
-    href: "/privacy-policy",
-    label: "Privacy Policy",
-  },
-  {
-    href: "/terms",
-    label: "Terms",
-  },
-];
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -36,7 +26,7 @@ export default function Footer() {
                 alt="Sound Fusion Entertainment"
                 width={150}
                 height={70}
-                className="h-auto w-[130px]"
+                className="h-auto w-32.5"
               />
             </Link>
 
