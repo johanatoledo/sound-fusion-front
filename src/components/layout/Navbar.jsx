@@ -8,7 +8,6 @@ import { Menu } from "lucide-react";
 import { NAV_LINKS } from "@/data/navigation";
 
 import MobileMenu from "@/components/layout/MobileMenu";
-import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 
 export default function Navbar() {
@@ -25,7 +24,7 @@ export default function Navbar() {
   return (
     <>
       <header className="sound-navbar fixed left-0 top-0 z-50 w-full">
-        <Container className="sound-navbar-container">
+        <Container className="sound-navbar-container  sound-bg-white  ">
           <Link
             href="/"
             className="shrink-0"
@@ -49,19 +48,14 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="sound-nav-link"
+                className="sound-nav-link  font-bold"
               >
                 {item.label}
               </Link>
             ))}
           </nav>
 
-          <Button
-            href="/quote"
-            className="sound-navbar-cta"
-          >
-            Get a Quote
-          </Button>
+         
 
           <button
             type="button"

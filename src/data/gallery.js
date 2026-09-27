@@ -21,3 +21,21 @@ export const galleryItems = [
     alt: "Colorful professional lighting on an event dance floor",
   },
 ];
+
+export const galleryVideos = [
+  {
+    id: "event-video-01",
+    title: "Wedding Lighting Experience",
+    category: "Wedding",
+    src: "/videos/soundFusion2.mp4",
+    poster: "/gallery/private-wedding.webp",
+  },
+
+  {
+    id: "event-video-02",
+    title: "Corporate Event Production",
+    category: "Corporate",
+    src: "/videos/soundFusion.mp4",
+    poster: "/gallery/professional-sound-lighting-events.webp",
+  },
+];

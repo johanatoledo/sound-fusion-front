@@ -6,7 +6,6 @@ import { X } from "lucide-react";
 
 import { NAV_LINKS } from "@/data/navigation";
 
-import Button from "@/components/ui/Button";
 
 export default function MobileMenu({
   isOpen,
@@ -47,7 +46,7 @@ export default function MobileMenu({
   return (
     <div
       id="mobile-navigation"
-      className="fixed inset-0 z-[60] md:hidden"
+      className="fixed inset-0 z-60 md:hidden"
       role="dialog"
       aria-modal="true"
       aria-label="Mobile navigation"
@@ -63,16 +62,14 @@ export default function MobileMenu({
       {/* Panel */}
       <aside className="absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col border-l border-white/10 bg-sound-black px-6 py-6 shadow-2xl">
         {/* Header */}
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-bold uppercase tracking-[0.18em] text-sound-lime">
-            Menu
-          </span>
+        <div className="flex items-end justify-between">
+        
 
           <button
             type="button"
             onClick={onClose}
             aria-label="Close navigation menu"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-sound-white transition hover:border-sound-lime hover:text-sound-lime"
+            className="flex h-10 w-10 items-end justify-center rounded-full border border-white/10 text-sound-white transition hover:border-sound-lime hover:text-sound-lime"
           >
             <X
               size={20}
@@ -98,16 +95,7 @@ export default function MobileMenu({
           ))}
         </nav>
 
-        {/* CTA */}
-        <div className="mt-auto pt-8">
-          <Button
-            href="/quote"
-            onClick={onClose}
-            className="w-full"
-          >
-            Get a Quote
-          </Button>
-        </div>
+       
       </aside>
     </div>
   );

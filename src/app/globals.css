@@ -54,8 +54,6 @@
    ========================================================================== */
 
 :root {
-  --background: #080808;
-  --foreground: #ffffff;
 
   --sound-black: #080808;
   --sound-dark: #121212;
@@ -92,8 +90,8 @@ body {
   margin: 0;
   min-height: 100vh;
 
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--sound-white);
+  color: var(--sound-black);
 
   font-family:
     "Inter",
@@ -157,16 +155,16 @@ video {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--sound-black);
+  background: var(--sound-white);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--sound-gray-dark);
+  background: var(--sound-lime);
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--sound-lime);
+  background: var(--color-sound-lime-dark);
 }
 /* ==========================================================================
    NAVBAR LAYOUT
@@ -553,18 +551,17 @@ video {
    BACKGROUNDS
    ========================================================================== */
 
-.sound-bg-black {
-  background: var(--sound-black);
+.sound-bg-white {
+  background: var(--sound-white);
 }
 
-.sound-bg-dark {
-  background: var(--sound-dark);
+.sound-bg-white-soft {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .sound-bg-dark-soft {
   background: var(--sound-dark-soft);
 }
-
 
 /* ==========================================================================
    GRADIENT TEXT
@@ -674,7 +671,7 @@ video {
    ========================================================================== */
 
 .sound-navbar {
-  background: rgba(8, 8, 8, 0.82);
+  background: var(--color-sound-white);
 
   border-bottom:
     1px solid rgba(255, 255, 255, 0.08);
@@ -691,7 +688,7 @@ video {
 .sound-nav-link {
   position: relative;
 
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--sound-black);
 
   font-size: 0.875rem;
   font-weight: 500;
@@ -700,7 +697,7 @@ video {
 }
 
 .sound-nav-link:hover {
-  color: var(--sound-white);
+  color: var(--sound-black);
 }
 
 .sound-nav-link::after {
@@ -1086,4 +1083,4 @@ select.sound-input option {
 
     border-bottom: 0;
   }
-}
+} 

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section className="sound-section sound-bg-dark">
+    <section className="sound-section bg-sound-white">
       <div className="sound-container">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Imagen */}
