@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function QuotePage() {
   return (
-    <main className="min-h-screen bg-sound-black pt-[var(--navbar-height)]">
+    <main className="min-h-screen bg-sound-black pt-(--navbar-height)">
       <section className="sound-section">
         <div className="sound-container">
           <div className="mx-auto mb-12 max-w-3xl text-center">

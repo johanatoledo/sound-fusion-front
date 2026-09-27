@@ -5,3 +5,14 @@ export const NAV_LINKS = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
+
+export const FOOTER_INFO_LINKS = [
+  {
+    href: "/privacy-policy",
+    label: "Privacy Policy",
+  },
+  {
+    href: "/terms",
+    label: "Terms",
+  },
+];
