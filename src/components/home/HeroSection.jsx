@@ -1,29 +1,14 @@
 export default function HeroSection() {
   return (
-    <section
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "100vh",
-        overflow: "hidden",
-        backgroundColor: "#ffffff",
-      }}
-    >
+    <section className="sound-video">
       <video
         autoPlay
         muted
         loop
         playsInline
-        controls
         preload="auto"
-        style={{
-          position: "absolute",
-          inset: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          zIndex: 1,
-        }}
+        className="sound-video-media"
+        aria-hidden="true"
       >
         <source
           src="/videos/soundFusion.mp4"
