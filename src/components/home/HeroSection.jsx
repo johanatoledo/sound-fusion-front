@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="sound-video">
+    <section className="sound-video top-30  ">
       <video
         autoPlay
         muted
