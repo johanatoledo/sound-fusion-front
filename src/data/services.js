@@ -23,7 +23,7 @@ export const services = [
     title: "DJ & Entertainment",
     shortDescription:
       "Professional entertainment to keep your guests engaged and your event moving.",
-    image: "/gallery/dj-professionl-event.webp",
+    image: "/gallery/dj-professional-event.webp",
   },
 
   {
@@ -32,6 +32,6 @@ export const services = [
     title: "Event Production",
     shortDescription:
       "Complete technical support for weddings, corporate events and celebrations.",
-    image: "/gllery/wedding-lighting-dance.webp",
+    image: "/gallery/wedding-lighting-dance.webp",
   },
 ];
