@@ -60,7 +60,7 @@ export default function MobileMenu({
       />
 
       {/* Panel */}
-      <aside className="absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col border-l border-white/10 bg-sound-black px-6 py-6 shadow-2xl">
+      <aside className="absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col border-l  text-sound-lime  bg-sound-black px-6 py-6 shadow-2xl">
         {/* Header */}
         <div className="flex items-end justify-between">
         
@@ -69,7 +69,7 @@ export default function MobileMenu({
             type="button"
             onClick={onClose}
             aria-label="Close navigation menu"
-            className="flex h-10 w-10 items-end justify-center rounded-full border border-white/10 text-sound-white transition hover:border-sound-lime hover:text-sound-lime"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-sound-lime text-sound-lime transition hover:bg-sound-lime hover:text-sound-black"
           >
             <X
               size={20}
