@@ -23,15 +23,15 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sound-navbar fixed left-0 top-0 z-50 w-full">
-        <Container className="sound-navbar-container  sound-bg-white  ">
+      <header className="sound-navbar  fixed left-0 top-0 z-10 w-full">
+        <Container className="sound-navbar-container   ">
           <Link
             href="/"
             className="shrink-0"
             aria-label="Go to Sound Fusion homepage"
           >
             <Image
-              src="/images/logo/logoSoundFusion.webp"
+              src="/images/logo/logo-sound-fusion-entertainment.webp"
               alt="Sound Fusion Entertainment"
               width={150}
               height={70}
@@ -63,7 +63,7 @@ export default function Navbar() {
             aria-label="Open navigation menu"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-sound-white transition hover:border-sound-lime hover:text-sound-lime md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-sound-black text-red transition hover:border-sound-lime hover:text-sound-lime md:hidden"
           >
             <Menu
               size={21}
