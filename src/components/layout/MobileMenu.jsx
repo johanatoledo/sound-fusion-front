@@ -80,7 +80,7 @@ export default function MobileMenu({
 
         {/* Navigation */}
         <nav
-          className="mt-10 flex flex-col gap-2"
+          className="mt-5 flex flex-col gap-2"
           aria-label="Mobile navigation"
         >
           {NAV_LINKS.map((item) => (
