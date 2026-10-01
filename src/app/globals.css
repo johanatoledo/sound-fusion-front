@@ -167,6 +167,68 @@ video {
   background: var(--color-sound-lime-dark);
 }
 /* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+
+.sound-navbar {
+  background: var(--color-sound-lime);
+  opacity: 0.80;
+  position:fixed;
+  left: calc(var(--spacing) * 0);
+  top: calc(var(--spacing) * 0) ;
+  
+
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* ==========================================================================
+   NAVIGATION LINKS
+   ========================================================================== */
+
+.sound-nav-link {
+  position: relative;
+
+  color: var(--sound-black);
+
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: color 0.25s ease;
+}
+
+.sound-nav-link:hover {
+  color: var(--sound-black);
+}
+
+.sound-nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 9999px;
+
+  background: red;
+
+  transition: width 0.30s ease;
+}
+
+.sound-nav-link:hover::after {
+  width: 100%;
+}
+
+/* ==========================================================================
    NAVBAR LAYOUT
    ========================================================================== */
 
@@ -175,13 +237,10 @@ video {
   align-items: center;
   justify-content: space-between;
 
-  padding-block: 1rem;
+  padding-block: 0.2rem;
 }
 
-.sound-navbar-logo {
-  width: 110px;
-  height: auto;
-}
+
 
 .sound-navbar-menu {
   display: none;
@@ -196,7 +255,7 @@ video {
 
 @media (min-width: 640px) {
   .sound-navbar-logo {
-    width: 130px;
+    width: 100px;
   }
 }
 
@@ -409,7 +468,615 @@ video {
 
   transform: translateY(-2px);
 }
+ /* ==========================================================================
+   ABOUT - SOUND VISUAL
+   ========================================================================== */
 
+.sound-about-visual {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 420px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(181, 220, 23, 0.12);
+  border-radius: 2rem;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(181, 220, 23, 0.08),
+      transparent 48%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.01)
+    );
+}
+
+
+/* --------------------------------------------------------------------------
+   GLOW
+   -------------------------------------------------------------------------- */
+
+.sound-about-glow {
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 50%;
+
+  background: rgba(181, 220, 23, 0.14);
+
+  filter: blur(70px);
+
+  animation:
+    sound-about-glow 4s ease-in-out infinite alternate;
+}
+
+
+/* --------------------------------------------------------------------------
+   ORBITS
+   -------------------------------------------------------------------------- */
+
+.sound-about-orbit {
+  position: absolute;
+
+  border: 1px solid rgba(181, 220, 23, 0.16);
+  border-radius: 50%;
+
+  animation:
+    sound-orbit-pulse 5s ease-in-out infinite;
+}
+
+.sound-about-orbit-outer {
+  width: 330px;
+  height: 330px;
+}
+
+.sound-about-orbit-middle {
+  width: 245px;
+  height: 245px;
+
+  animation-delay: 0.6s;
+}
+
+.sound-about-orbit-inner {
+  width: 165px;
+  height: 165px;
+
+  border-color: rgba(181, 220, 23, 0.3);
+
+  animation-delay: 1.2s;
+}
+
+
+/* --------------------------------------------------------------------------
+   CORE
+   -------------------------------------------------------------------------- */
+
+.sound-about-core {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 145px;
+  height: 145px;
+
+  border: 1px solid rgba(181, 220, 23, 0.3);
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(181, 220, 23, 0.15),
+      rgba(8, 8, 8, 0.82) 68%
+    );
+
+  box-shadow:
+    0 0 40px rgba(181, 220, 23, 0.1),
+    inset 0 0 30px rgba(181, 220, 23, 0.08);
+}
+
+.sound-about-core-small {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.6rem;
+  font-weight: 700;
+
+  letter-spacing: 0.3em;
+}
+
+.sound-about-core-title {
+  margin-top: 0.25rem;
+
+  color: var(--sound-white);
+
+  font-size: 1.35rem;
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+}
+
+.sound-about-core-line {
+  width: 42px;
+  height: 2px;
+
+  margin-top: 0.65rem;
+
+  border-radius: 999px;
+
+  background: var(--sound-lime);
+
+  box-shadow:
+    0 0 12px rgba(181, 220, 23, 0.65);
+}
+
+
+/* --------------------------------------------------------------------------
+   EQUALIZER
+   -------------------------------------------------------------------------- */
+
+.sound-equalizer {
+  position: absolute;
+
+  left: 50%;
+  bottom: 38px;
+
+  z-index: 6;
+
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+  gap: 6px;
+
+  width: min(80%, 340px);
+  height: 72px;
+
+  transform: translateX(-50%);
+}
+
+.sound-equalizer-bar {
+  width: 5px;
+  height: var(--bar-height);
+
+  min-height: 10px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(181, 220, 23, 0.25),
+      var(--sound-lime)
+    );
+
+  box-shadow:
+    0 0 10px rgba(181, 220, 23, 0.22);
+
+  transform-origin: bottom;
+
+  animation:
+    sound-equalizer 1.4s ease-in-out infinite alternate;
+
+  animation-delay: var(--bar-delay);
+}
+
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+@keyframes sound-equalizer {
+  0% {
+    transform: scaleY(0.45);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes sound-orbit-pulse {
+  0%,
+  100% {
+    transform: scale(0.96);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: scale(1.04);
+    opacity: 0.9;
+  }
+}
+
+@keyframes sound-about-glow {
+  from {
+    transform: scale(0.9);
+    opacity: 0.45;
+  }
+
+  to {
+    transform: scale(1.12);
+    opacity: 0.85;
+  }
+}
+
+
+/* ==========================================================================
+   ABOUT RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+  .sound-about-visual {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sound-about-visual {
+    min-height: 330px;
+
+    border-radius: 1.5rem;
+  }
+
+  .sound-about-orbit-outer {
+    width: 270px;
+    height: 270px;
+  }
+
+  .sound-about-orbit-middle {
+    width: 205px;
+    height: 205px;
+  }
+
+  .sound-about-orbit-inner {
+    width: 145px;
+    height: 145px;
+  }
+
+  .sound-about-core {
+    width: 125px;
+    height: 125px;
+  }
+
+  .sound-equalizer {
+    bottom: 25px;
+
+    height: 55px;
+  }
+
+  .sound-equalizer-bar {
+    width: 4px;
+  }
+}
+
+/* ==========================================================================
+   ABOUT - MOVING LIGHT BEAMS
+   ========================================================================== */
+
+.sound-light-show {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 2rem;
+
+
+}
+
+
+/* --------------------------------------------------------------------------
+   AMBIENT GLOW
+   -------------------------------------------------------------------------- */
+
+.sound-light-stage-glow {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: 70%;
+  height: 38%;
+
+  transform: translateX(-50%);
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(181, 220, 23, 0.16),
+      transparent 70%
+    );
+
+  filter: blur(35px);
+}
+
+
+/* --------------------------------------------------------------------------
+   MOVING HEAD LIGHTS
+   -------------------------------------------------------------------------- */
+
+.sound-light-head {
+  position: absolute;
+  top: 32px;
+
+  width: 34px;
+  height: 22px;
+
+  border-radius: 6px;
+
+  background: #181818;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.45);
+}
+
+.sound-light-head::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+
+  width: 13px;
+  height: 13px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: var(--sound-black);
+
+  box-shadow:
+    0 0 12px rgba(181, 220, 23, 0.7),
+    0 0 28px rgba(181, 220, 23, 0.45);
+}
+
+
+.sound-light-head-1 {
+  left: 17%;
+  
+}
+
+.sound-light-head-2 {
+  left: 37%;
+}
+
+.sound-light-head-3 {
+  right: 36.5%;
+}
+
+.sound-light-head-4 {
+  right: 17%;
+}
+
+
+/* --------------------------------------------------------------------------
+   LIGHT BEAMS
+   -------------------------------------------------------------------------- */
+
+.sound-beam {
+  position: absolute;
+  top: 52px;
+
+  width: 135px;
+  height: 360px;
+
+  opacity: 0.68;
+
+  transform-origin: top center;
+
+  clip-path: polygon(
+    46% 0,
+    54% 0,
+    100% 100%,
+    0 100%
+  );
+
+  filter: blur(4px);
+
+  mix-blend-mode: screen;
+
+  pointer-events: none;
+}
+
+.sound-beam-1 {
+  left: 8%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(248, 2, 228, 0.6),
+      rgba(248, 2, 228, 0.22) 45%,
+      transparent 100%
+    );
+  animation:
+    sound-beam-left 4.5s ease-in-out infinite alternate;
+}
+
+.sound-beam-2 {
+  left: 28%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(81, 180, 247, 0.6),
+      rgba(81, 180, 247, 0.22) 45%,
+      transparent 100%
+    );
+
+  animation:
+    sound-beam-center-left 5.2s ease-in-out infinite alternate;
+}
+
+.sound-beam-3 {
+  right: 28%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(248, 232, 2, 0.6),
+      rgba(248, 232,2, 0.22) 45%,
+      transparent 100%
+    );
+  animation:
+    sound-beam-center-right 5.2s ease-in-out infinite alternate;
+}
+
+.sound-beam-4 {
+  right: 8%;
+
+   background:
+    linear-gradient(
+      to bottom,
+      rgba(181, 220, 23, 0.6),
+      rgba(181, 220, 23, 0.22) 45%,
+      transparent 100%
+    );
+
+  animation:
+    sound-beam-right 4.5s ease-in-out infinite alternate;
+}
+
+
+/* --------------------------------------------------------------------------
+   FLOOR LIGHT
+   -------------------------------------------------------------------------- */
+
+.sound-light-floor {
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+
+  display: flex;
+  gap: 18px;
+
+  transform: translateX(-50%);
+}
+
+.sound-light-floor span {
+  width: 70px;
+  height: 8px;
+
+  border:none;
+
+  background: rgba(181, 220, 23, 0.24);
+
+  filter: blur(8px);
+
+  box-shadow:
+    0 0 25px rgba(181, 220, 23, 0.35);
+}
+
+
+/* ==========================================================================
+   BEAM ANIMATIONS
+   ========================================================================== */
+
+@keyframes sound-beam-left {
+  from {
+    transform:
+      rotate(-26deg)
+      scaleY(0.92);
+  }
+
+  to {
+    transform:
+      rotate(16deg)
+      scaleY(1.06);
+  }
+}
+
+@keyframes sound-beam-center-left {
+  from {
+    transform:
+      rotate(-12deg)
+      scaleY(1);
+  }
+
+  to {
+    transform:
+      rotate(12deg)
+      scaleY(1.08);
+  }
+}
+
+@keyframes sound-beam-center-right {
+  from {
+    transform:
+      rotate(12deg)
+      scaleY(1.08);
+  }
+
+  to {
+    transform:
+      rotate(-12deg)
+      scaleY(1);
+  }
+}
+
+@keyframes sound-beam-right {
+  from {
+    transform:
+      rotate(26deg)
+      scaleY(1.06);
+  }
+
+  to {
+    transform:
+      rotate(-16deg)
+      scaleY(0.92);
+  }
+}
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 1023px) {
+  .sound-light-show {
+    min-height: 380px;
+  }
+
+  .sound-beam {
+    height: 310px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sound-light-show {
+    min-height: 320px;
+
+    border-radius: 1.5rem;
+  }
+
+  .sound-beam {
+    width: 95px;
+    height: 260px;
+  }
+
+  .sound-light-head {
+    width: 28px;
+    height: 18px;
+  }
+}
 
 /* ==========================================================================
    CARDS
@@ -555,6 +1222,10 @@ video {
   background: var(--sound-white);
   
 }
+.sound-bg-b {
+  background: var(--sound-black);
+  
+}
 
 .sound-bg-white-soft {
   background: rgba(255, 255, 255, 0.9);
@@ -607,17 +1278,6 @@ video {
    HERO VIDEO
    ========================================================================== */
 
-.sound-video {
-  position: relative;
-
-  width: 100%;
-  height: 100vh;
-
-  overflow: hidden;
-
-  background: var(--sound-white);
-}
-
 .sound-video-media {
   position: absolute;
   inset: 0;
@@ -635,7 +1295,7 @@ video {
    width: 100%;
    height: 100vh;
    overflow: hidden;
-   background-color: var (--sound-white);
+   background-color: var(--sound-black);
    }
 
 /* ==========================================================================
@@ -701,62 +1361,6 @@ video {
 }
 
 
-/* ==========================================================================
-   NAVBAR
-   ========================================================================== */
-
-.sound-navbar {
-  background: var(--color-sound-white);
-  opacity: 0.80;
-
-  border-bottom:
-    1px solid rgba(255, 255, 255, 0.08);
-
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
-
-/* ==========================================================================
-   NAVIGATION LINKS
-   ========================================================================== */
-
-.sound-nav-link {
-  position: relative;
-
-  color: var(--sound-lime-dark);
-
-  font-size: 1.3rem;
-  font-weight: 500;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  transition: color 0.25s ease;
-}
-
-.sound-nav-link:hover {
-  color: var(--sound-black);
-}
-
-.sound-nav-link::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  bottom: -6px;
-
-  width: 0;
-  height: 2px;
-
-  border-radius: 9999px;
-
-  background: red;
-
-  transition: width 0.30s ease;
-}
-
-.sound-nav-link:hover::after {
-  width: 100%;
-}
 
 
 /* ==========================================================================
