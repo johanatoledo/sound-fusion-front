@@ -60,7 +60,7 @@ export default function MobileMenu({
       />
 
       {/* Panel */}
-      <aside className="absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col border-l  text-sound-lime  bg-sound-black px-6 py-6 shadow-2xl">
+      <aside className="absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col border-l  text-sound-lime  bg-sound-black/70 px-6 py-6 shadow-2xl">
         {/* Header */}
         <div className="flex items-end justify-between">
         

@@ -22,7 +22,7 @@ export default function Footer() {
               className="inline-flex"
             >
               <Image
-                src="/images/logo/logoSoundFusion.webp"
+                src="/images/logo/logo-sound-fusion-entertainment.webp"
                 alt="Sound Fusion Entertainment"
                 width={150}
                 height={70}

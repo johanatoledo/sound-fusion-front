@@ -78,7 +78,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`sound-navbar z-10 w-full transition-transform duration-250 ease-in-out
+        className={`sound-navbar z-30 w-full transition-transform duration-250 ease-in-out
           ${
             showNavbar
               ? "translate-y-0"
