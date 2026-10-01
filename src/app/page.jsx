@@ -12,9 +12,9 @@ export default function HomePage() {
     <main>
       <HeroSection />
 
-      <ServicesSection />
-
       <AboutSection />
+
+      <ServicesSection />
 
       <GallerySection />
 
