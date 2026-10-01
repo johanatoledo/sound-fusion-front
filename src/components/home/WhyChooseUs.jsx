@@ -38,7 +38,7 @@ const benefits = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="sound-section sound-bg-dark">
+    <section className="sound-section sound-bg-b">
       <div className="sound-container">
         <div className="mx-auto mb-12 max-w-3xl text-center lg:mb-16">
           <span className="sound-section-label">

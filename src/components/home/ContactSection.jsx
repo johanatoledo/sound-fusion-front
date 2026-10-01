@@ -7,7 +7,7 @@ import {
 
 export default function ContactSection() {
   return (
-    <section className="sound-section sound-bg-black">
+    <section className="sound-section sound-bg-dark-soft">
       <div className="sound-container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div>

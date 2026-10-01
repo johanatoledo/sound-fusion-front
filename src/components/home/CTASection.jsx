@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="sound-section sound-bg-dark">
+    <section className="sound-section sound-bg-dark-soft">
       <div className="sound-container">
         <div className="sound-card sound-glow relative overflow-hidden px-6 py-16 text-center sm:px-10 lg:px-16 lg:py-20">
           <div

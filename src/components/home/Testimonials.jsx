@@ -3,7 +3,7 @@ import { testimonials } from "@/data/testimonials";
 
 export default function Testimonials() {
   return (
-    <section className="sound-section sound-bg-black">
+    <section className="sound-section sound-bg-b">
       <div className="sound-container">
         <div className="mb-12 max-w-2xl lg:mb-16">
           <span className="sound-section-label">

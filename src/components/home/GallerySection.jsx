@@ -6,7 +6,7 @@ import GalleryCard from "../gallery/GalleryCard";
 
 export default function GallerySection() {
   return (
-    <section className="sound-section sound-bg-black">
+    <section className="sound-section sound-bg-b">
       <div className="sound-container">
         <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end lg:mb-16">
           <div className="max-w-2xl">

@@ -1,26 +1,13 @@
-import Image from "next/image";
-import Link from "next/link";
+import Button from "@/components/ui/Button";
+import Container from "@/components/ui/Container";
 
 export default function AboutSection() {
   return (
-    <section className="sound-section bg-sound-white">
-      <div className="sound-container">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Imagen */}
-          <div className="relative min-h-105 overflow-hidden rounded-3xl sm:min-h-130">
-            <Image
-              src="/gallery/professional-sound-corporate-event.webp"
-              alt="Sound Fusion professional event production team"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-
-            <div className="sound-image-overlay" />
-          </div>
-
-          {/* Contenido */}
-          <div>
+    <section className="sound-section bg-sound-dark-soft">
+      <Container>
+        <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+          {/* Content */}
+          <div className="max-w-2xl">
             <span className="sound-section-label">
               About Sound Fusion
             </span>
@@ -28,14 +15,15 @@ export default function AboutSection() {
             <h2 className="sound-section-title">
               Creating Experiences That
               <span className="sound-text-lime">
-                {" "}People Remember
+                {" "}
+                People Remember
               </span>
             </h2>
 
             <p className="sound-section-description">
-              Sound Fusion delivers professional sound, lighting and event
-              production solutions designed to transform ordinary spaces into
-              unforgettable experiences.
+              Sound Fusion Entertainment delivers professional sound, lighting
+              and event production solutions designed to transform ordinary
+              spaces into unforgettable experiences.
             </p>
 
             <p className="sound-text-muted mt-5 max-w-xl leading-7">
@@ -45,16 +33,40 @@ export default function AboutSection() {
             </p>
 
             <div className="mt-8">
-              <Link
+              <Button
                 href="/about"
-                className="sound-button-secondary"
+                variant="secondary"
               >
                 Learn More About Us
-              </Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* Animated lighting */}
+          <div
+            className="sound-light-show"
+            aria-hidden="true"
+          >
+            <div className="sound-light-stage-glow" />
+
+            <span className="sound-beam sound-beam-1" />
+            <span className="sound-beam sound-beam-2" />
+            <span className="sound-beam sound-beam-3" />
+            <span className="sound-beam sound-beam-4" />
+
+            <span className="sound-light-head sound-light-head-1" />
+            <span className="sound-light-head sound-light-head-2" />
+            <span className="sound-light-head sound-light-head-3" />
+            <span className="sound-light-head sound-light-head-4" />
+
+            <div className="sound-light-floor">
+              <span />
+              <span />
+              <span />
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

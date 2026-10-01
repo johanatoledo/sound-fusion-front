@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="sound-video top-30  ">
+    <section className="sound-video  top-14 md:top-25 lg:top-26">
       <video
         autoPlay
         muted
@@ -11,7 +11,7 @@ export default function HeroSection() {
         aria-hidden="true"
       >
         <source
-          src="/videos/soundFusion.mp4"
+          src="/videos/sound-fusion-entertainment.mp4"
           type="video/mp4"
         />
       </video>

@@ -5,7 +5,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="sound-section sound-bg-black"
+      className="sound-section sound-bg-b"
     >
       <div className="sound-container">
         <div className="mb-12 max-w-2xl lg:mb-16">
