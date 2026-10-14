@@ -1,43 +1,43 @@
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 
+
 export default function AboutSection() {
   return (
     <section className="sound-section bg-sound-dark-soft">
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           {/* Content */}
-          <div className="max-w-2xl">
+          <div className="max-w-xl">
             <span className="sound-section-label">
-              About Sound Fusion
+              About Sound Fusion Entertainment
             </span>
 
-            <h2 className="sound-section-title">
+            <h3 className="sound-section-title">
               Creating Experiences That
               <span className="sound-text-lime">
                 {" "}
                 People Remember
               </span>
-            </h2>
+            </h3>
 
-            <p className="sound-section-description">
-              Sound Fusion Entertainment delivers professional sound, lighting
-              and event production solutions designed to transform ordinary
-              spaces into unforgettable experiences.
+            <p className="sound-section-description text-justify">
+              Our owner has over 20 years of experience in the field of Sound Engineering, and has worked in Baltimore City clubs.
+              The owner has trained all staff above production standard. All of our staff love working with sound equipment and production lighting, and specialize in knowing how to tune it to create the best listening and lighting experience for our customers.
+              Our equipment is of the highest quality and receives regular maintenance. Our lighting is of the newest variety and technology.
             </p>
 
-            <p className="sound-text-muted mt-5 max-w-xl leading-7">
-              From weddings and private celebrations to corporate events, we
-              combine professional equipment, creative lighting and reliable
-              technical support to make every event look and sound its best.
+            <p className="sound-text-muted mt-5 max-w-xl leading-7 text-justify">
+             We have receive lots and lots of kudos from previous clients in regards to our customer service. We strive to provide you with a custom entertainment schedule for your event. 
+             Each event comes with a complementary sit-down consultation, so that we can be sure you will love our service.
             </p>
 
             <div className="mt-8">
               <Button
-                href="/about"
+                href="/contact"
                 variant="secondary"
               >
-                Learn More About Us
+                Contact
               </Button>
             </div>
           </div>
