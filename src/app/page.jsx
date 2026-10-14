@@ -4,7 +4,6 @@ import AboutSection from "../components/home/AboutSection";
 import GallerySection from "../components/home/GallerySection";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import Testimonials from "../components/home/Testimonials";
-import CTASection from "../components/home/CTASection";
 import ContactSection from "../components/home/ContactSection";
 
 export default function HomePage() {
@@ -22,7 +21,7 @@ export default function HomePage() {
 
       <Testimonials />
 
-      <CTASection />
+      
 
       <ContactSection />
     </main>
