@@ -9,8 +9,7 @@ export default function Button({
   className = "",
   ...props
 }) {
-  const variantClass =
-    variant === "secondary"
+  const variantClass = variant === "secondary"
       ? "sound-button-secondary"
       : "sound-button-primary";
 
