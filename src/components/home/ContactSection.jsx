@@ -1,9 +1,5 @@
 import Link from "next/link";
-import {
-  Mail,
-  MessageCircle,
-  MapPin,
-} from "lucide-react";
+import { Mail, MessageCircle, MapPin, } from "lucide-react";
 
 export default function ContactSection() {
   return (
