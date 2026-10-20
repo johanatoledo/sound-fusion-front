@@ -1,7 +1,7 @@
 export const galleryItems = [
   {
     id: 1,
-    title: "Wedding Reception",
+    title: "Wedding Lighting",
     category: "Wedding",
     image: "/gallery/wedding-lighting-personalize.webp",
     alt: "Professional wedding reception lighting by Sound Fusion",
