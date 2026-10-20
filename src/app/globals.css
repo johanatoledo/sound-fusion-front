@@ -1340,6 +1340,78 @@ video {
     0 0 60px rgba(181, 220, 23, 0.15);
 }
 
+/* ==========================================================================
+   CONTACT FORM INICIAL
+   ========================================================================== */
+
+.sound-contact-form {
+  position: relative;
+  width: 100%;
+}
+
+.sound-contact-label {
+  display: block;
+  margin-bottom: 0.3rem;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.sound-contact-label span {
+  color: var(--sound-lime);
+}
+
+.sound-contact-input {
+  width: 100%;
+
+  padding: 0.6rem 0 0.75rem;
+
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 0;
+
+  outline: none;
+
+  background: transparent;
+  color: var(--sound-white);
+
+  font-size: 0.95rem;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.sound-contact-input:hover {
+  border-bottom-color: rgba(255, 255, 255, 0.45);
+}
+
+.sound-contact-input:focus {
+  border-bottom-color: var(--sound-lime);
+
+  box-shadow:
+    0 1px 0 0 var(--sound-lime);
+}
+
+.sound-contact-input-error {
+  border-bottom-color: #ef4444;
+}
+
+.sound-contact-input-error:focus {
+  border-bottom-color: #ef4444;
+
+  box-shadow:
+    0 1px 0 0 #ef4444;
+}
+
+.sound-contact-textarea {
+  min-height: 140px;
+
+  resize: vertical;
+}
 
 /* ==========================================================================
    FORM ELEMENTS
