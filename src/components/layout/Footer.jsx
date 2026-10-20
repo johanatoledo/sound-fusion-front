@@ -51,9 +51,7 @@ export default function Footer() {
 
             {/* Redes sociales */}
             <div className="mt-8">
-              <p className="text-sm font-semibold text-sound-white">
-                Follow Sound Fusion
-              </p>
+              
 
               <div className="mt-4 flex flex-wrap gap-3">
                 {SOCIAL_LINKS.map((social) => {
