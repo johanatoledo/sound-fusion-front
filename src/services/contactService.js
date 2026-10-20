@@ -1,29 +1,33 @@
-export async function sendContactRequest(
-  formData
-) {
-  const response = await fetch(
-    "/api/contact",
-    {
-      method: "POST",
+async function postContactForm(formData, fallbackMessage) {
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  });
 
-      headers: {
-        "Content-Type": "application/json",
-      },
-
-      body: JSON.stringify(formData),
-    }
-  );
-
-  const result = await response
-    .json()
-    .catch(() => null);
+  const data = await response.json().catch(() => null);
 
   if (!response.ok) {
     throw new Error(
-      result?.message ||
-        "Unable to send your request."
+      data?.message || fallbackMessage
     );
   }
 
-  return result;
+  return data;
+}
+
+export function sendContactMessage(formData) {
+  return postContactForm(
+    formData,
+    "We couldn't send your message. Please try again."
+  );
+}
+
+export function sendContactRequest(formData) {
+  return postContactForm(
+    formData,
+    "Unable to send your request."
+  );
 }
