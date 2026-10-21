@@ -98,7 +98,7 @@ export default function Navbar() {
               width={50}
               height={50}
               priority
-              className="sound-navbar-logo"
+              className="sound-navbar-logo border-5"
             />
           </Link>
 

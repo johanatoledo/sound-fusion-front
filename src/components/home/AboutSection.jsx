@@ -33,7 +33,15 @@ export default function AboutSection() {
               technology.
             </p>
 
-            <p className="sound-text-muted mt-5 max-w-xl leading-7 text-justify">
+            <p className="sound-text-muted mt-5 max-w-xl text-justify leading-7">
+              Sound Fusion Entertainment is also present on The Knot, where
+              couples can discover our wedding entertainment services and see
+              our work, reviews and recognition. Our presence on the platform
+              reflects the trust clients have placed in us for wedding sound,
+              DJ entertainment and event lighting.
+            </p>
+
+            <p className="sound-text-muted mt-5 max-w-xl text-justify leading-7">
               We have received many compliments from previous clients regarding
               our customer service. We strive to provide a custom entertainment
               schedule for every event. Each event includes a complimentary
@@ -46,25 +54,61 @@ export default function AboutSection() {
                 href="/contact"
                 variant="secondary"
               >
-                Contact Sound Fusion
+                Tell Us About Your Event
               </Button>
             </div>
           </div>
 
           {/* The Knot recognition */}
-          <div className="relative min-h-[360px] overflow-hidden rounded-3xl border border-white/10 bg-sound-black sm:min-h-[420px]">
-            <Image
-              src="/images/reconocimiento-de-bodas-sound-fusion.png"
-              alt="Sound Fusion Entertainment recognition on The Knot"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain p-8 sm:p-10"
-            />
-
+          <div className="relative mx-auto w-full max-w-2xl">
+            {/* Decorative background */}
             <div
-              className="pointer-events-none absolute inset-0 bg-gradient-to-br from-sound-lime/5 via-transparent to-transparent"
+              className="absolute -inset-2 translate-x-3 translate-y-3 border border-sound-lime/30 sm:-inset-3 sm:translate-x-4 sm:translate-y-4"
+              style={{
+                clipPath:
+                  "polygon(0 0, 92% 0, 100% 10%, 100% 100%, 8% 100%, 0 90%)",
+              }}
               aria-hidden="true"
             />
+
+            {/* Image */}
+            <div
+              className="relative aspect-[4/3] w-full overflow-hidden bg-sound-black"
+              style={{
+                clipPath:
+                  "polygon(0 0, 92% 0, 100% 10%, 100% 100%, 8% 100%, 0 90%)",
+              }}
+            >
+              <Image
+                src="/images/reconocimiento-de-bodas-sound-fusion.png"
+                alt="Sound Fusion Entertainment profile and wedding recognition on The Knot"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 50vw"
+                className="object-contain"
+              />
+
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-sound-black/10"
+                aria-hidden="true"
+              />
+            </div>
+
+            {/* Recognition information */}
+            <div className="relative z-10 mt-6 flex items-center gap-4 sm:mt-7">
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-sound-lime/40" />
+
+              <div className="shrink-0 border border-sound-lime/30 bg-sound-black px-5 py-3 text-center shadow-xl">
+                <span className="block text-[10px] font-semibold uppercase tracking-[0.24em] text-sound-lime">
+                  Featured On
+                </span>
+
+                <span className="mt-1 block text-sm font-semibold text-sound-white">
+                  The Knot
+                </span>
+              </div>
+
+              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-sound-lime/40" />
+            </div>
           </div>
         </div>
       </Container>

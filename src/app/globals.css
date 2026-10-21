@@ -405,7 +405,96 @@ video {
   font-size: clamp(0.95rem, 2vw, 1.1rem);
   line-height: 1.8;
 }
+ /* ==========================================================================
+   GALLERY AUTOPLAY CAROUSEL
+   ========================================================================== */
 
+.sound-gallery-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sound-gallery-carousel::before,
+.sound-gallery-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 4rem;
+  pointer-events: none;
+}
+
+.sound-gallery-carousel::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--sound-black),
+    transparent
+  );
+}
+
+.sound-gallery-carousel::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--sound-black),
+    transparent
+  );
+}
+
+.sound-gallery-track {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  will-change: transform;
+
+  animation: sound-gallery-scroll 30s linear infinite;
+}
+
+.sound-gallery-slide {
+  width: min(82vw, 360px);
+  flex: 0 0 auto;
+}
+
+.sound-gallery-carousel:hover .sound-gallery-track {
+  animation-play-state: paused;
+}
+
+@keyframes sound-gallery-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(
+      calc(-50% - 0.75rem)
+    );
+  }
+}
+
+@media (min-width: 640px) {
+  .sound-gallery-slide {
+    width: 340px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sound-gallery-slide {
+    width: 380px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sound-gallery-track {
+    animation: none;
+  }
+
+  .sound-gallery-carousel {
+    overflow-x: auto;
+  }
+}
 
 /* ==========================================================================
    BUTTONS

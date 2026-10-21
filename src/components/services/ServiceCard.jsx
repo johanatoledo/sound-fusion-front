@@ -3,16 +3,19 @@ import Link from "next/link";
 
 export default function ServiceCard({ service }) {
   return (
-    <article className="sound-card sound-service-card group">
+    <article className="sound-card sound-service-card group h-full">
       <Image
         src={service.image}
-        alt={service.title}
+        alt={service.imageAlt || service.title}
         fill
-        sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-cover transition duration-700 group-hover:scale-105"
+        sizes="(max-width: 767px) 82vw, (max-width: 1024px) 50vw, 40vw"
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
       />
 
-      <div className="sound-image-overlay" />
+      <div
+        className="sound-image-overlay"
+        aria-hidden="true"
+      />
 
       <div className="sound-service-card-content">
         <h3 className="sound-service-card-title">
@@ -26,8 +29,10 @@ export default function ServiceCard({ service }) {
         <Link
           href={`/services/${service.slug}`}
           className="sound-service-card-link"
+          aria-label={`Learn more about ${service.title}`}
         >
-          Learn More →
+          Learn More
+          <span aria-hidden="true"> →</span>
         </Link>
       </div>
     </article>
